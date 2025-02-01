@@ -1,0 +1,14 @@
+name: PEP8 Check
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+    - name: Install packages
+      run: pip install flake8   
+    - name: Run flake8
+      run: flake8 . --max-line-length=120
