@@ -11,7 +11,7 @@ class Shape:
 
     def __init__(self, name):
         self.name = name
-        print(f"Creating a {self.__class__.__name__} with name {self.name}")
+        print(f"Creating a {self.__class__.__name__} with name {self.name}!")
 
     @abstractmethod
     def area(self):
