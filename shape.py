@@ -29,7 +29,7 @@ class Shape(ABC):
         return f"{self.name} with area {self.area()} and perimeter {self.perimeter()}"
 
     def __eq__(self, other):
-        """ Check if two shapes are equal 
+        """ Check if two shapes are equal
             subclasses could call this and/or improve it
         """
         return self.area() == other.area() and self.perimeter() == other.perimeter()
