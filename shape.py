@@ -9,18 +9,18 @@ class Shape(ABC):
     Abstract class for Shape
     """
 
-    def __init__(self, name)->None:
+    def __init__(self, name) -> None:
         """ Initialize Shape with a name """
         self.name = name
         print(f"Creating a {self.__class__.__name__} with name {self.name}!")
 
     @abstractmethod
-    def area(self)->float:
+    def area(self) -> float:
         """ Abstract method for area """
         pass
 
     @abstractmethod
-    def perimeter(self)->float:
+    def perimeter(self) -> float:
         """ Abstract method for perimeter"""
         pass
 
