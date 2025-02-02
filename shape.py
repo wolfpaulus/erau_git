@@ -28,7 +28,7 @@ class Shape(ABC):
         """ str representation of the shape """
         return f"{self.name} with area {self.area()} and perimeter {self.perimeter()}"
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         """ Check if two shapes are equal
             subclasses could call this and/or improve it
         """
