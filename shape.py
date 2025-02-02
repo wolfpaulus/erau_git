@@ -24,7 +24,7 @@ class Shape(ABC):
         """ Abstract method for perimeter"""
         pass
 
-    def __str__(self)->str:
+    def __str__(self) -> str:
         """ str representation of the shape """
         return f"{self.name} with area {self.area()} and perimeter {self.perimeter()}"
 
