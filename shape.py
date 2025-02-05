@@ -34,3 +34,9 @@ class Shape(ABC):
         subclasses could call this and/or improve it
         """
         return self.area() == other.area() and self.perimeter() == other.perimeter()
+    
+    def get_type(self) -> str:
+        """
+        Returns type of instance as a string
+        """
+        return self.__class__.__name__
