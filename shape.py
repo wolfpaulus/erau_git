@@ -40,3 +40,7 @@ class Shape(ABC):
         Returns type of instance as a string
         """
         return self.__class__.__name__
+
+    def __add__(self, other) -> float:
+        """Adds the perimeter of two shapes together"""
+        return (self.perimeter() + other.perimeter())
