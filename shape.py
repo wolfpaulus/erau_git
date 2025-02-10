@@ -40,3 +40,9 @@ class Shape(ABC):
         Returns type of instance as a string
         """
         return self.__class__.__name__
+
+    def __add__(self, other):
+        """
+        Adds the area of two shapes together.
+        """
+        return f"{self.name} and {other.name} have a combined area of {self.area() + other.area()}"
