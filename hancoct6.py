@@ -41,7 +41,7 @@ class Polygon(Shape):
         Y_COMP = 1
 
         total_area = 0
-        num_verts = self.vertices.__len__()
+        num_verts = len(self.vertices)
 
         # calculate based on each position in vertices
         for i in range(num_verts):
@@ -49,7 +49,7 @@ class Polygon(Shape):
             # since [+1] ends up looping past, modulo is needed
             diff = self.vertices[i - 1][X_COMP] - self.vertices[(i + 1) % num_verts][X_COMP]
             total_area += self.vertices[i][Y_COMP] * diff
-        
+
         # half of output creates final value
         return 0.5 * total_area
 
@@ -57,7 +57,7 @@ class Polygon(Shape):
         """Calculates perimter of the polygon"""
 
         total_perimeter = 0
-        num_verts = self.vertices.__len__()
+        num_verts = len(self.vertices)
 
         # sum distance between each pair of points
         for i in range(num_verts):
@@ -77,3 +77,7 @@ if __name__ == "__main__":
     print(triangle)
     print(rectangle)
     print(pentagon)
+
+    # test added function in shape.py (area_difference())
+    print(f"Area difference of triangle and rectangle is: {triangle.area_difference(rectangle)}")
+    print(f"Area difference of pentagon and triangle is: {pentagon.area_difference(triangle)}")
