@@ -40,3 +40,12 @@ class Shape(ABC):
         Returns type of instance as a string
         """
         return self.__class__.__name__
+    
+    def print_attributes(self) -> None:
+        """
+        Prints all attributes of the instance
+        Added by Daniil Gorshkov
+        """
+        print(f"Class: {self.__class__.__name__}") # Print class name
+        for attribute, value in self.__dict__.items(): # Print the name of each attribute and its value
+            print(f"{attribute}: {value}")
