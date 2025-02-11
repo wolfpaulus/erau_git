@@ -26,15 +26,15 @@ class Circle(Shape):
         """
         return pi * self.radius ** 2
     
-    def circumference(self) -> float:
+    def perimeter(self) -> float:
         """
-        Returns cicrumference of Circle instance
+        Returns circumference (perimeter) of Circle instance
         """
         return 2 * pi * self.radius
     
     def __str__(self):
         """str representation of the Circle"""
-        return f"{self.name} with area {self.area()} and circumference {self.circumference()}"
+        return f"{self.name} with area {self.area()} and circumference {self.perimeter()}"
     
     def __eq__(self, other):
         """
